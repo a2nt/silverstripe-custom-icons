@@ -1,0 +1,7 @@
+---
+Name: a2nt-custom-icons-ext
+---
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - A2nt\CustomIcons\SiteConfigEx

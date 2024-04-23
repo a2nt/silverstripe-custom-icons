@@ -12,7 +12,7 @@
     }],
     "minimum-stability": "dev",
     "require": {
-        "silverstripe/framework": "^4"
+        "silverstripe/framework": "*"
     },
     "autoload": {
         "psr-4": {

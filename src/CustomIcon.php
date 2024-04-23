@@ -33,8 +33,12 @@ class CustomIcon extends DataObject
 
     public function CMSThumbnail()
     {
-        $thumb = $this->Image()->CMSThumbnail();
-        return HTMLValue::create('<img src="'.$thumb->Link().'" alt="'.$this->Title.'" />');
+        $thumb = $this->Image();
+        if (!$thumb->ID) {
+            return;
+        }
+
+        return HTMLValue::create('<img src="'.$thumb->CMSThumbnail()->Link().'" loading="lazy" alt="'.$this->Title.'" />');
     }
 
     public function onBeforeWrite()
